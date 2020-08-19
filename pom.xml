@@ -11,6 +11,7 @@
         <module>flink-demo</module>
         <module>thread-examples</module>
         <module>exception-demo</module>
+        <module>delay-queue</module>
     </modules>
 
     <packaging>pom</packaging>
