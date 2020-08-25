@@ -1,4 +1,4 @@
-package com.jwt.demo.delayqueue.config;
+package com.jwt.demo.delayqueue.common.redis;
 
 import lombok.Data;
 import org.springframework.context.annotation.Configuration;

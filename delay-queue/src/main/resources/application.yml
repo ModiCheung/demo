@@ -1,2 +1,14 @@
+
+
 redis-lua:
-  delayQueueLua: 我是redis延时队列脚本
+  delayQueueLua: local firstElement = redis.call('zrange', KEYS[1], 0, 0, 'withscores');
+      if tonumber(firstElement[2]) < ARGV[1] then redis.call('zrem', KEYS[1], firstElement[1]); return firstElement[1] else return false end
+
+
+spring:
+  redis:
+    host: 172.23.0.217
+    port: 30947
+    password: paas123
+server:
+  port: 9001
