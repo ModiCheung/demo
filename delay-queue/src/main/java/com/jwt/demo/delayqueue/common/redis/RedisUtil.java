@@ -16,13 +16,14 @@ public class RedisUtil {
      * @param args 参数集合(不定项参数)
      * @return
      */
-    public static String eval(RedisTemplate redisTemplate, String script, List keys, Object... args) {
+    public static Object eval(RedisTemplate redisTemplate, String script, List keys, Object... args) {
         DefaultRedisScript<String> defaultRedisScript = new DefaultRedisScript<String>();
         defaultRedisScript.setResultType(String.class);
         StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
         defaultRedisScript.setScriptText(script);
-        String sha1 = (String) redisTemplate.execute(defaultRedisScript, stringRedisSerializer, stringRedisSerializer, keys, args);
-        return sha1;
+        Object execute = redisTemplate.execute(defaultRedisScript, stringRedisSerializer, stringRedisSerializer, keys, args);
+        System.out.println(execute);
+        return execute;
     }
 
 
