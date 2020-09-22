@@ -1,4 +1,4 @@
-package com.jwt.demo.redis.lettuce;
+package com.jwt.demo.middleware.redis.lettuce;
 
 import io.lettuce.core.RedisClient;
 import io.lettuce.core.RedisURI;
