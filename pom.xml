@@ -12,9 +12,9 @@
         <module>thread-examples</module>
         <module>exception-demo</module>
         <module>delay-queue</module>
-        <module>redis</module>
         <module>middleware</module>
-        <module>middleware/kafka</module>
+        <module>helloworld</module>
+        <module>fabric8</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -34,6 +34,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -48,5 +53,19 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
