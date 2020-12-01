@@ -1,7 +1,0 @@
-server:
-  port: 8300
-
-spring:
-  profiles:
-    active: kem
-
