@@ -16,6 +16,8 @@
         <module>helloworld</module>
         <module>fabric8</module>
         <module>spring</module>
+        <module>concurrent</module>
+        <module>design</module>
     </modules>
 
     <packaging>pom</packaging>

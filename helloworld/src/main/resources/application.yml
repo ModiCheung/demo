@@ -4,4 +4,8 @@ server:
 spring:
   profiles:
     active: kem
+  datasource:
+    url: jdbc:mysql://172.23.0.238:3306/mon?useUnicode=true&characterEncoding=utf8&useSSL=false&useTimezone=true&serverTimezone=GMT%2B8 #测试环境数据库访问地址
+    username: root
+    password: paas2018
 
